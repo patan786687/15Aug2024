@@ -39,3 +39,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentYear = new Date().getFullYear();
     yearSpan.textContent = currentYear;
 });
+
+let currentIndex = 0;
+
+function moveSlide(direction) {
+    const carouselInner = document.querySelector('.carousel-inner');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    currentIndex = (currentIndex + direction + totalItems) % totalItems;
+    const offset = -currentIndex * 100;
+    carouselInner.style.transform = `translateX(${offset}%)`;
+
+    // Update active class
+    items.forEach((item, index) => {
+        item.classList.toggle('active', index === currentIndex);
+    });
+}
