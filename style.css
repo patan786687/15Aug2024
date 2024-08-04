@@ -22,6 +22,7 @@ header .logo {
     color: #ffffff; /* White text for the logo */
 }
 
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -85,23 +86,11 @@ header nav ul li a:hover {
     color: #ffffff; /* White text */
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
 
-.hamburger .line {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: all 0.3s;
-}
 
 @media (max-width: 768px) {
     nav ul {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
     }
@@ -112,28 +101,30 @@ header nav ul li a:hover {
     width: 100%;
 }
 
-.hamburger {
-    display: flex;
-}
 
-.nav-links.show {
-    display: flex;
-}
+
 /* Responsiveness for different devices */
 
 @media (max-width: 480px) {
     .about-images {
         flex-direction: column;
+      
     }
 }
 @media (max-width: 768px) {
     .about-images {
         min-width: 100%;
         flex-direction: column;
+       
     }
     
 }
-
+@media (max-width: 480px) {
+    .about-images {
+        flex-direction: column;
+      
+    }
+}
 
 
 

@@ -56,3 +56,12 @@ function moveSlide(direction) {
         item.classList.toggle('active', index === currentIndex);
     });
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+});
