@@ -53,6 +53,7 @@ header nav ul li a {
 header nav ul li a:hover {
     background-color: rgb(255, 153, 51); /* Red background on hover */
     color: #ffffff; /* White text */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     
 }
 .hamburger {
@@ -60,6 +61,7 @@ header nav ul li a:hover {
     flex-direction: column;
     cursor: pointer;
     padding: 10px;
+    position: absolute;
 }
 .hamburger .line {
     width: 25px;
@@ -67,8 +69,11 @@ header nav ul li a:hover {
     background-color: white;
     margin: 4px 0;
     transition: 0.4s;
+    
+    
+    
 }
-.hamburger.active + ul {
+.hamburger.active + header nav ul {
     display: flex; /* Show the nav links when hamburger is active */
 }
 
@@ -83,6 +88,7 @@ header nav ul li a:hover {
         left: 0;
         background-color: #0033A0; /* Blue background */
     }
+    
     header nav ul li a {
         color: #0033A0;
         
