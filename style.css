@@ -21,6 +21,12 @@ header .logo {
     font-weight: bold;
     color: #ffffff; /* White text for the logo */
 }
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
 
 
 header nav ul {
@@ -32,6 +38,7 @@ header nav ul {
 header nav ul li {
    color: white;
    text-decoration: none;
+   margin: 0 10px;
 }
 
 header nav ul li a {
@@ -52,12 +59,14 @@ header nav ul li a:hover {
     display: none; /* Hide hamburger by default */
     flex-direction: column;
     cursor: pointer;
+    padding: 10px;
 }
 .hamburger .line {
     width: 25px;
     height: 3px;
     background-color: white;
     margin: 4px 0;
+    transition: 0.4s;
 }
 .hamburger.active + ul {
     display: flex; /* Show the nav links when hamburger is active */
@@ -84,6 +93,7 @@ header nav ul li a:hover {
     }
     .hamburger {
         display: flex; /* Show hamburger in mobile view */
+        
     }
    
 }
@@ -116,6 +126,9 @@ header nav ul li a:hover {
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+    nav ul.show{
+        display: flex;
     }
 }
 .nav-links li {
@@ -313,26 +326,27 @@ header nav ul li a:hover {
 
 
 #events .event-item {
-    background-image: url('');
+    background-color: lightslategray;
     padding: 20px;
     border-radius: 10px;
     text-align: left;
+    color: #f4f4f4;
 }
 
 
 /* Background Images */
-#events .event-item:nth-child(1) {
-      background-image: url('Event-Color.jpg'); /*Path to your image  */
-    /* background-color: #FF0000; */
+/* #events .event-item:nth-child(1) {
+      background-image: url('Event-Color.jpg'); 
+    
 }
 
 #events .event-item:nth-child(2) {
-    background-image: url('Event-Color.jpg'); /* Path to your image */
+    background-image: url('Event-Color.jpg'); 
 }
 
 #events .event-item:nth-child(3) {
-    background-image: url('Event-Color.jpg'); /* Path to your image */
-}
+    background-image: url('Event-Color.jpg'); 
+} */
 
 #events .event-item h3 {
     font-size: 24px;
@@ -612,21 +626,26 @@ header nav ul li a:hover {
 }
 
 /* Footer Section */
+.edge-footer{
+    height: 25rem;
+    border-radius: 0;
+    background-color: lightgray;
+}
 footer {
-    background-color: #0033A0; /* Blue background */
-    background-image: url('Footer.jpg');
+    background-color: lightslategray;
     object-fit: fill;
     color: #ffffff;
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
+    border-radius: 10px;
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 .footer-links,
