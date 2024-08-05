@@ -48,6 +48,20 @@ header nav ul li a:hover {
     color: #ffffff; /* White text */
     
 }
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+.hamburger.active + ul {
+    display: flex; /* Show the nav links when hamburger is active */
+}
 
 /* Responsive styling */
 @media (max-width: 768px) {
@@ -60,6 +74,18 @@ header nav ul li a:hover {
         left: 0;
         background-color: #0033A0; /* Blue background */
     }
+    header nav ul li a {
+        color: #0033A0;
+        
+    }
+    header nav ul li{
+        padding: 10px;
+        display: none;
+    }
+    .hamburger {
+        display: flex; /* Show hamburger in mobile view */
+    }
+   
 }
 .nav-links {
     list-style: none;
@@ -81,10 +107,7 @@ header nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.nav-links a:hover {
-    background-color: #FF0000; /* Red background on hover */
-    color: #ffffff; /* White text */
-}
+
 
 
 
